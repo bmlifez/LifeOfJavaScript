@@ -27,5 +27,25 @@ function findNumberOfPair(inputArray,difference){
     }
     return result;
 }
+// Time complexity = o(n*n)
+// console.log(findNumberOfPair([1,7,5,9,2,12,3],2));
 
-console.log(findNumberOfPair([1,7,5,9,2,12,3],2));
+function findNumberOfPairHashApproach(inputArray,difference){
+    let result = [];
+    const hash = new Map();
+    for(let i=0;i<inputArray.length;i++){
+        hash.set(inputArray[i],1);
+    }
+    for(let i=0;i<inputArray.length;i++){
+        let element = inputArray[i] - difference;
+        if(element>0 && hash.has(element)){
+            let subArray = [];
+            subArray.push(element,inputArray[i]);
+            result.push(subArray);
+        }
+    }
+    return result;
+}
+
+console.log(findNumberOfPairHashApproach([1,7,5,9,2,12,3],3));
+// Time complexity = o(n)

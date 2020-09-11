@@ -1,0 +1,18 @@
+1. Simple Code
+
+2. Linear Code
+const emailOwner = async () =>{
+    const issue = await getIssue();
+    const owner = await getOwner(issue.ownerId);
+    const email = await sendEmail(owner.email,`some text`);
+    console.log('email sent to owner');
+}
+
+3. Fail Fast Approach
+
+4. Better method & variable naming convention
+
+5. Functions should do one thing
+Function should not be larger than 20–25 lines.Smaller the 
+function is better. Function should either modify or query 
+something but not both. Consider the following code.
