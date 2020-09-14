@@ -1,0 +1,52 @@
+:root {
+  --primary-color: black;
+  --text-color: white;
+}
+
+body {
+  background: var(--primary-color);
+}
+
+body {
+  background: grey;
+  color: white;
+}
+
+.main {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main header {
+  font-weight: 700;
+}
+
+.light {
+  background: white;
+  color: black;
+}
+
+.parent {
+  width: 80%;
+  height: 30px;
+}
+
+.one {
+  background: green;
+  position: relative;
+  left: 10px;
+}
+
+.two {
+  background: blue;
+}
+
+.three {
+  background: red;
+}
+/*# sourceMappingURL=main.css.map */

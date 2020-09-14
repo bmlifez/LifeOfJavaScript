@@ -1,0 +1,57 @@
+// 1. In CSS also we can declare variable , but sass had this feature 
+// before than css had.
+
+// Declare variable in plain css
+@import './variable';
+
+:root {
+    --primary-color: black;
+    --text-color: white;
+}
+
+body {
+    background: var(--primary-color);
+}
+
+// Declare variable in plain scss , in variable scss has 100%
+// compatibility as it is declared true value everywhere , rather
+// than variables in plain css
+body {
+    background: $primary-color;
+    color: $text-color;
+}
+
+@mixin theme($light-theme: true) {
+    @if $light-theme{
+        background: lighten($primary-color,100%);
+        color: darken($text-color, $amount: 100%);
+    }
+}
+
+.main {
+    width: 80%;
+    display: flex;
+    justify-content: center ;
+    header {
+        font-weight: map-get($map: $font-weight, $key: bold);
+    }
+}
+
+.light {
+    @include theme($light-theme: true);
+}
+.parent{
+    width: 80%;
+    height: 30px;
+}
+.one {
+    background: green;
+    position: relative;
+    left: 10px;
+}
+.two {
+    background: blue;
+}
+.three {
+    background:red;
+}

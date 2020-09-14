@@ -9,6 +9,7 @@ const emailOwner = async () =>{
 }
 
 3. Fail Fast Approach
+Identify failure case first and return them
 
 4. Better method & variable naming convention
 
