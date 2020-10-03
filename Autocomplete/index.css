@@ -1,0 +1,49 @@
+body {
+    background: black;
+    min-height: 100vh;
+}
+
+.form-group-field {
+    position: relative;
+    padding-left: 20px;
+    margin-top: 30px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form_field {
+    border-width: 3px;
+    padding-bottom: 6px;  
+    background: transparent;
+    color:white;
+    transition: border-color 0.2s;
+    border-style: none;
+    border-bottom: 2px solid grey;
+    font-size:medium;
+}
+
+.form_label {
+    top: 0;
+    font-size: 1rem;
+    color: grey;
+    font-size: 20px;
+}
+
+.suggestion-li{
+    color: white;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid grey;
+    padding: 4px;
+}
+
+.img-icon{
+    max-width: 50px;
+}
+
+.suggestion-li .span-li{
+    padding-right:20px;
+}
