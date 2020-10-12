@@ -1,5 +1,6 @@
 /* 
 Differnece between Arrow function vs regular function
+
 1. Syntax (shorter and cleaner)
 2. Arguments binding (no default arguments)
 3. Use of this keyword (no this present of its own)
@@ -28,7 +29,7 @@ testRegular.foo();
 
 function Person() {
     title = "Army of the thains";
-    function getArmy(){
+    getArmy=()=>{
         console.log(this.title);
         z=()=>console.log('inner arrow',this.title);
         return z();

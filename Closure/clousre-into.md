@@ -18,6 +18,7 @@ function init() {
     }
     displayName();
 }
+
 init();
 init() creates a local variable called name and a function called displayName().
 The displayName() function is an inner function that is defined inside init() 

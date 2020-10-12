@@ -72,13 +72,11 @@ const updateCart = (crypto, type) => {
         for (let i = 0; i < productComparison.length; i++) {
             if (productComparison[i].id === crypto) {
                 index = i;
-                console.log("match");
             }
         }
         productComparison.splice(index, 1);
         productComparison;
     }
-    uniqueArray(productComparison);
     let html = productComparison.map((ele) => {
         return (
             `<div class="flex-container">
