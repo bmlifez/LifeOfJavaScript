@@ -13,7 +13,7 @@ Given a set of valid words
 
 
 
-Given rand pos from the board, output max legth word can be formed from that pos.
+Given rand pos from the board, output max length word can be formed from that pos.
 
 Input - 0,0 -> CAN, CAR, CAT
 Input - 2,2 -> TANK, TAXI

@@ -1,4 +1,6 @@
-const search = document.getElementById('search');
+(function(){
+
+const search    = document.getElementById('search');
 const matchList = document.getElementById('matchList');
 const sortingId = document.getElementById('sorting');
 
@@ -32,9 +34,6 @@ sortingId.addEventListener('click',function(e){
         let sortedArrDescending = matches;
         sortedArrDescending.sort((a,b)=> b.id - a.id);
         outputHTML(sortedArrDescending);
-    }
-    if(e.target.value==="3"){
-        outputHTML(matches);
     }
 })
 
@@ -76,3 +75,4 @@ const outputHTML = (matches) => {
     })
     matchList.innerHTML = html;
 }
+})()
