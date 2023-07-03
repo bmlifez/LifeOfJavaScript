@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const Timer = () => {
 	const [seconds, setSeconds] = useState(0);
-  const [interval, setIntervalRef] = useState(null);
+    const [interval, setIntervalRef] = useState(null);
 	const [isRunning, setIsRunning] = useState(false);
 
 	const generateInterval = () => {
@@ -33,7 +33,7 @@ const Timer = () => {
   }
 
 	return (
-		<div>
+	<div>
       <h1>Timer</h1>
       <h2>{seconds} seconds</h2>
       <button onClick={handleStart}>Start</button> 
