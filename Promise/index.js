@@ -34,3 +34,10 @@ Promise.all(wrappedPromises)
     console.log('Failed Promise at index:', index);
     console.log('Error:', error);
   });
+
+
+  const wrapperPromises = promises.map((promise, index) => {
+    return new Promise((res,rej) => {
+      promise.then(result => res({result, index})).catch(error => rej({ error, index}));
+    })
+  })
