@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+  <div>
+    <h1>Todo List</h1>
+    <div>
+      <input onchange="updateInput(this.value)" type="text" placeholder="Add your task" />
+      <div>
+        <button onclick="submitBtn()">Submit</button>
+      </div>
+    </div>
+    <ul id="list"></ul>
+  </div>
+
+  <script>
+    const result = ['Walk the dog', 'Water the plants', 'Wash the dishes']
+    const todoList = document.getElementById('list');
+    let addTodoValue='';
+
+    function deleteItem(val){
+      const index = result.findIndex((item) => item === val);
+      result.splice(index, 1);
+      renderList();
+    } 
+
+    function renderList(){
+      todoList.innerHTML = result.map((ele) => {
+      return (
+          `<li>
+            <span>${ele}</span>
+            <button onclick="deleteItem('${ele}')">Delete</button>
+          </li>`
+        )
+      }).join('');
+    }
+
+    renderList();
+
+    function updateInput(value) {
+      addTodoValue = value;
+    }
+
+    function submitBtn() {
+      if(addTodoValue.length>0){
+        result.push(addTodoValue);
+      }
+      renderList();
+    }
+  </script>
+</body>
+
+</html>
