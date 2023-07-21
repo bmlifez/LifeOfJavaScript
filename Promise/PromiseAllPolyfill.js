@@ -73,4 +73,23 @@ export default function promiseAll(iterable) {
        }
      })
     })
- }
+}
+
+function promiseAllPolyFill(iterables){
+    return new Promise((resolve, reject) => {
+        const result = new Array(iterables.length);
+        let unresolved = iterables.length - 1;
+
+        if(unresolved === 0){
+            resolve(result);
+        }
+
+        iterables.forEach(async (item, index) => {
+            try {
+                
+            } catch (error) {
+                
+            }
+        })
+    })
+}
